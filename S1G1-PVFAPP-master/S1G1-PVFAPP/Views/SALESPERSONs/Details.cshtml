@@ -1,0 +1,54 @@
+﻿@model S1G1_PVFAPP.Models.SALESPERSON
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="box box-info">
+
+    <div class="box-header with-border">
+        <h2>@ViewBag.Title</h2>
+    </div>
+    <div>
+        <h4>SALESPERSON</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.SalespersonName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SalespersonName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SalespersonTelephone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SalespersonTelephone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SalespersonFax)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SalespersonFax)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TERRITORY.TerritoryName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TERRITORY.TerritoryName)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.SalespersonID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

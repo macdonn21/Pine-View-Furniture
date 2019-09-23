@@ -1,0 +1,51 @@
+﻿@model S1G1_PVFAPP.Models.VENDOR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="box box-info">
+    <div class="box-header with-border">
+        <h4><b>VENDOR</b></h4>
+        <hr />
+        <h1 class="box-title">@ViewBag.Title</h1>
+    </div>
+    <div>
+        <span>@(ViewBag.Exception != null ? ViewBag.Exception : string.Empty)</span>
+    </div>
+
+    <div>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.VendorName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VendorName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.VendorAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VendorAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SUPPLy.MaterialID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SUPPLy.MaterialID)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.VendorID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </DIV>

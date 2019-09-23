@@ -1,0 +1,51 @@
+﻿@model S1G1_PVFAPP.Models.ORDER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="box box-info">
+    <div class="box-header with-border">
+
+        <hr />
+        <h1 class="box-title">@ViewBag.Title</h1>
+    </div>
+    <div>
+        <span>@(ViewBag.Exception != null ? ViewBag.Exception : string.Empty)</span>
+    </div>
+
+    <div>
+        <h4>ORDER</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OrderDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CUSTOMER.CustomerName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CUSTOMER.CustomerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.OrderedLine.ProductID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.OrderedLine.ProductID)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.OrderID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

@@ -1,0 +1,36 @@
+﻿@model S1G1_PVFAPP.Models.SKILL
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="box box-info">
+
+    <div class="box-header with-border">
+        <h2>@ViewBag.Title</h2>
+    </div>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>SKILL</h4>
+        <hr />
+        <dl class="dl-horizontal"></dl>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Skill1, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Skill1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Skill1, "", new { @class = "text-danger" })
+            </div>  
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+    </div>

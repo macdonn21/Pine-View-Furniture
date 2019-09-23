@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9e7b2af6b5864f25bd8c021add13cca3" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.CUSTOMER" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EMPLOYEE" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ORDER" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.OrderedLine" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PRODUCT" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PRODUCT_LINE" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.RAWMATERIAL" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SALESPERSON" Width="1.5" PointX="5.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SKILL" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SUPPLy" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="7.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TERRITORY" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.US" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.VENDOR" Width="1.5" PointX="3" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.WORKCENTER" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_ORDER_CUSTOMER" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_EMPLOYEE_EMPLOYEE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_OrderedLine_ORDER" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_OrderedLine_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_PRODUCT_PRODUCT_LINE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_USES_PRODUCT" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_SUPPLIES_RAWMATERIAL" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_USES_RAWMATERIAL" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_SALESPERSON_TERRITORY" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_SUPPLIES_VENDOR" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.PRODUCED_IN" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.DOES_BUSSINESS_IN" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.HAS_SKILL" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.WORKSIN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

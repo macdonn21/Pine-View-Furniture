@@ -1,0 +1,62 @@
+﻿@model S1G1_PVFAPP.Models.EMPLOYEE
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="box box-info">
+
+    <div class="box-header with-border">
+        <h2>@ViewBag.Title</h2>
+    </div>  
+
+    <div>
+        <h4>EMPLOYEE</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Supervisor)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Supervisor)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EMPLOYEE1.EmployeeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EMPLOYEE1.EmployeeName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EMPLOYEE2.EmployeeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EMPLOYEE2.EmployeeName)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

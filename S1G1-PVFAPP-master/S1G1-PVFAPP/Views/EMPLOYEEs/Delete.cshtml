@@ -1,0 +1,69 @@
+﻿@model S1G1_PVFAPP.Models.EMPLOYEE
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="box box-info">
+
+    <div class="box-header with-border">
+        <h2>@ViewBag.Title</h2>
+    </div>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>EMPLOYEE</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EmployeeAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmployeeAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Supervisor)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Supervisor)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EMPLOYEE1.EmployeeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EMPLOYEE1.EmployeeName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EMPLOYEE2.EmployeeName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EMPLOYEE2.EmployeeName)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<S1G1_PVFAPP.Models.SUPPLy>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplyUnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RAWMATERIAL.MaterialName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VENDOR.VendorName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplyUnitPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RAWMATERIAL.MaterialName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VENDOR.VendorName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SupplyID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SupplyID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SupplyID })
+        </td>
+    </tr>
+}
+
+</table>

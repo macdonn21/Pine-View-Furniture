@@ -1,0 +1,42 @@
+﻿@model S1G1_PVFAPP.Models.US
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>US</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GoesIntoQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoesIntoQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCT.ProductDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCT.ProductDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAWMATERIAL.MaterialName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAWMATERIAL.MaterialName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UsesID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,46 @@
+﻿@model S1G1_PVFAPP.Models.RAWMATERIAL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="box box-info">
+
+    <div class="box-header with-border">
+        <h2>@ViewBag.Title</h2>
+    </div>
+    <div>
+        <h4>RawMaterial</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.MaterialName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MaterialName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MaterialStandardCost)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MaterialStandardCost)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UnitOfMeasure)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UnitOfMeasure)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MaterialID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

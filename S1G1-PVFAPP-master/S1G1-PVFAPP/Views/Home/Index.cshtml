@@ -1,0 +1,198 @@
+﻿
+@{
+    ViewBag.Title = "Pine Valley Furniture Dashboard";
+    ViewBag.Msg = Session["UserAccessInfo"];
+    ViewBag.RawMaterial = Session["RM_Count"]??0;
+    ViewBag.Employees = Session["E_Count"] ?? 0;
+    ViewBag.Skills = Session["Skill_Count"] ?? 0;
+    ViewBag.WorkCenters = Session["WC_Count"] ?? 0;
+    ViewBag.Products = Session["Product_Count"] ?? 0;
+    ViewBag.ProductLines = Session["ProductLines_Count"] ?? 0;
+    ViewBag.Territory = Session["Territory_Count"] ?? 0;
+    ViewBag.Vendors = Session["Vendor_Count"] ?? 0;
+    ViewBag.SalesPersons = Session["SalesPerson_Count"] ?? 0;
+    ViewBag.Customers = Session["Customer_Count"] ?? 0;
+    ViewBag.Orders = Session["Order_Count"] ?? 0;
+    ViewBag.OrderedLines = Session["OrderedLines_Count"]??0;
+}
+<div id="page-wrapper">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h1>@ViewBag.Title</h1>
+        </div>
+        <br />
+        @{ if (ViewBag.Msg != null)
+            { <div class="alert alert-info alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h4><i class="icon fa fa-info"></i> Alert!</h4>
+                    <h2>@ViewBag.Msg</h2>
+                </div>
+            }
+        }
+        <div class="box-body">
+            <div class="row">
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-red">
+                        <div class="inner">
+                            <h3>@ViewBag.Employees</h3>
+                            <p>Employees</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-person"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "Employees" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-aqua">
+                        <div class="inner">
+                            <h3>@ViewBag.Skills</h3>
+                            <p>Skills</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "Skills" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-orange">
+                        <div class="inner">
+                            <h3>@ViewBag.WorkCenters</h3>
+                            <p>Work Centers</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-industry"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "WorkCenters" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3>@ViewBag.RawMaterial</h3>
+                            <p>Raw Materials</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "RawMaterials" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-yellow">
+                        <div class="inner">
+                            <h3>@ViewBag.Territory</h3>
+                            <p>Territories</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-map"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "Territory" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3>@ViewBag.Customers</h3>
+                            <p>Customers</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "Customers" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-blue-gradient">
+                        <div class="inner">
+                            <h3>@ViewBag.ProductLines</h3>
+                            <p>Product Lines</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "ProductLines" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-green-gradient">
+                        <div class="inner">
+                            <h3>@ViewBag.Orders</h3>
+                            <p>Orders</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-bell"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "Orders" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-yellow-gradient">
+                        <div class="inner">
+                            <h3>@ViewBag.OrderedLines</h3>
+                            <p>Order Lines</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-sitemap"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "OrderedLines" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-teal-gradient">
+                        <div class="inner">
+                            <h3>@ViewBag.Products</h3>
+                            <p>Products</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-tags"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "Products" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-teal-gradient">
+                        <div class="inner">
+                            <h3>@ViewBag.Vendors</h3>
+                            <p>Vendors</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-truck"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "Vendors" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-red-gradient">
+                        <div class="inner">
+                            <h3>@ViewBag.SalesPersons</h3>
+                            <p>Salesperson  </p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        @Html.ActionLink("More info ~>", "Index", new { controller = "Salespersons" }, new { @class = "small-box-footer" })
+                    </div>
+                </div>
+                <!-- ./col -->
+            </div>
+        </div>
+    </div>
+</div>

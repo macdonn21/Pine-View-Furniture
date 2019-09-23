@@ -1,0 +1,48 @@
+﻿@model S1G1_PVFAPP.Models.OrderedLine
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>OrderedLine</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderedQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderedQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ORDER.CustomerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORDER.CustomerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCT.ProductDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCT.ProductDescription)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
